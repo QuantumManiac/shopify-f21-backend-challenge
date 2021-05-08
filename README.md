@@ -1,4 +1,4 @@
-# shopify-f20-backend-challenge
+# shopify-f21-backend-challenge
 
 My submission for the Fall 2021 - Shopify
 Developer Intern Challenge

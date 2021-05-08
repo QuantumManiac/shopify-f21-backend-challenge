@@ -1,5 +1,5 @@
 {
-  "name": "shopify-f20-backend-challenge",
+  "name": "shopify-f21-backend-challenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QuantumManiac/shopify-f20-backend-challenge.git"
+    "url": "git+https://github.com/QuantumManiac/shopify-f21-backend-challenge.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QuantumManiac/shopify-f20-backend-challenge/issues"
+    "url": "https://github.com/QuantumManiac/shopify-f21-backend-challenge/issues"
   },
-  "homepage": "https://github.com/QuantumManiac/shopify-f20-backend-challenge#readme",
+  "homepage": "https://github.com/QuantumManiac/shopify-f21-backend-challenge#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
