@@ -16,7 +16,7 @@ Features:
 ## Usage
 ```
 npm i 
-node ./index.js
+node index.js
 ```
 You will be prompted to log in or register. Register a new account and you will be good to go.
 
@@ -25,7 +25,7 @@ A few sample images have been provided that you can either search for or use the
 Create new images and see how that workflow goes.
 
 ## Testing
-Testing is somewhat lacking due to time constraints but can be run with:
+Testing is somewhat lacking due to time constraints and complexity (the test cases have been described but not implemented), but can be run with:
 
 ```
 npm run test

@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha --recursive",
+    "coverage": "nyc --all npm run test"
   },
   "repository": {
     "type": "git",
@@ -28,7 +29,16 @@
     "terminal-image": "^1.2.1"
   },
   "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
     "eslint": "^7.25.0",
-    "eslint-config-strongloop": "^2.1.0"
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-mocha": "^8.1.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "rewire": "^5.0.0",
+    "rootpath": "^0.1.2",
+    "sinon": "^10.0.0",
+    "sinon-chai": "^3.6.0"
   }
 }
