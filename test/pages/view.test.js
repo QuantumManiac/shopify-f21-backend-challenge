@@ -45,6 +45,17 @@ describe('view', () => {
         it('should take a base64 string and turn it into a buffer', () => {
             
         });
+    });
+
+    describe('deleteImage', () => {
         
+        it('should successfully delete the image of the given ID', () => {
+            
+        });
+
+        it('should return a count of deleted images', () => {
+            
+        });
+
     });
 });
