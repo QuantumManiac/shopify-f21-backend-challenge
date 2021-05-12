@@ -13,6 +13,10 @@ Features:
 - Rudimentary full-text searching that goes through image titles and descriptions
 - View counts for images 
 
+## Requirements
+
+Created on NodeJS v14.15.5
+
 ## Usage
 ```
 npm i 
