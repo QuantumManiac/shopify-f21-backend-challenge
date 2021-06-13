@@ -1,7 +1,4 @@
-# shopify-f21-backend-challenge
-
-My submission for the Fall 2021 - Shopify
-Developer Intern Challenge
+# tui-image-repository
 
 A fun little image repository app with some interesting twists: 
 - Everything (including picture viewing) is in the terminal
