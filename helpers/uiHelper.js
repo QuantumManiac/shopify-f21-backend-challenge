@@ -1,16 +1,15 @@
+// Helper functions for UI generation and interaction
 const prompt = require('prompt-sync')({sigint: true});
 const chalk = require('chalk');
 
-const { windowWidth } = require('../config.json');
+const windowWidth = process.stdout.columns ?? require('../config.json').fallbackWindowWidth;
 
 /**
  * @description prints to console a decorated heading
  * @param {string} headingText The heading text to use
  */
 function drawHeading(headingText) {
-    console.log(`${chalk.gray('='.repeat(windowWidth))}
-${chalk.bold(headingText.toUpperCase())}
-${chalk.gray('='.repeat(windowWidth))}\n`);
+    console.log(`${chalk.gray('='.repeat(windowWidth))}\n${chalk.bold(headingText.toUpperCase())}\n${chalk.gray('='.repeat(windowWidth))}\n`);
 }
 
 /**
@@ -104,7 +103,7 @@ function textAbstract(text, length) {
     return text + '...';
 }
 
-// https://stackoverflow.com/a/39914235 - can probably be integrated better, but it works
+// https://stackoverflow.com/a/39914235
 /**
  * @description "sleeps" the program for the given amount of time
  * @param {number} ms time to sleep in milliseconds

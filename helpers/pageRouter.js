@@ -1,3 +1,4 @@
+// Rudimentary page router for application front-end
 const fs = require('fs');
 
 let pages = {};

@@ -1,4 +1,4 @@
 {
-    "windowWidth": 64,
+    "fallbackWindowWidth": 120,
     "windowTransitionDelay": 1000
 }

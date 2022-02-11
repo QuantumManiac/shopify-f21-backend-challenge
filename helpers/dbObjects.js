@@ -1,3 +1,4 @@
+// Intialization for ORM
 const Sequelize = require('sequelize');
 
 // Init Sqlite DB connection
@@ -8,7 +9,7 @@ const sequelize = new Sequelize('database', 'user', 'password', {
     storage: 'database.sqlite',
 });
 
-// Create tables
+// Create table models
 const Images = require('../models/Images')(sequelize, Sequelize.DataTypes);
 const Users = require('../models/Users')(sequelize, Sequelize.DataTypes);
 

@@ -1,3 +1,4 @@
+// Helper functions for authentication flows
 const prompt = require('prompt-sync')({sigint: true});
 const bcrypt = require('bcrypt');
 const chalk = require('chalk');
@@ -20,9 +21,10 @@ async function registerUser() {
     do {
         // Prompt for username until valid one given
         username = prompt('Choose a Username: ');
-        validUsernameRegister = !(await checkIfUsernameExists(username));
+        // Username should not be same as the register command, and not already exist
+        validUsernameRegister = username !== '!register' && !(await checkIfUsernameExists(username));
         if (!validUsernameRegister) {
-            console.log('Username already exists. Please try another one.');
+            console.log('Username already exists or is invalid. Please try another one.');
         }
     } while (!validUsernameRegister);
 
@@ -61,7 +63,7 @@ async function registerUser() {
 // https://stackoverflow.com/a/42737209
 /**
  * @description checks if a user with given username already exists in db
- * @param {*} username username to check
+ * @param { string } username username to check
  * @returns { boolean } whether or not the user exists in db
  */
 async function checkIfUsernameExists(username) {

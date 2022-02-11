@@ -25,10 +25,10 @@ module.exports = async function viewImage(state) {
     drawDivider();
     console.log(`${chalk.bold(imageData.name.toUpperCase())}
 
-Author: ${chalk.yellowBright(imageData.author)}
-Description: ${imageData.description}
-Views: ${imageData.views}
-`);
+    Author: ${chalk.yellowBright(imageData.author)}
+    Description: ${imageData.description}
+    Views: ${imageData.views}
+    `);
 
     const viewOptions = {};
 

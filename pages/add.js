@@ -23,7 +23,7 @@ module.exports = async function addImage(state) {
     const addImageSourceOptions = {
         'Browse Locally (relative path)': {source: 'path'},
         'Enter an image URL': {source: 'url'},
-        Exit: {source: 'exit'},
+        'Exit': {source: 'exit'},
     };
 
     const { source } = optionHandler(addImageSourceOptions);
@@ -37,7 +37,7 @@ module.exports = async function addImage(state) {
 
     do {
 
-        let imageLocation = prompt(`Enter image ${source} ${chalk.gray('(or enter \"!exit\" to exit)')}: `).replace('"', '');
+        let imageLocation = prompt(`Enter image ${source} ${chalk.gray('(or enter \"!exit\" to exit)')}: `);
 
         // Exit if object is chosen
         if (imageLocation === '!exit') return exitToMenu();
@@ -90,7 +90,7 @@ async function fetchImageAsBase64(source, location) {
         try {
             imageBuffer = fs.readFileSync(location);
         } catch (err) {
-            'FileReadFailedError';
+            throw 'FileReadFailedError';
         }
     } else if (source === 'url') {
         // Fetch the file if it's remote
@@ -113,7 +113,7 @@ async function fetchImageAsBase64(source, location) {
 /**
  * @description Downloads an image from the provided URL and returns a buffer for it
  * @param {*} url The URL of the image
- * @returns {Buffer} A buffere for the image
+ * @returns {Buffer} A buffer for the image
  */
 async function downloadPage(url) {
     // Check if the URL actually leads to an image
